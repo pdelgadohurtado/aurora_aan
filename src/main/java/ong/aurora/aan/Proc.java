@@ -46,7 +46,7 @@ public class Proc implements Processor<String, String, String, String> {
 
         Record<String, String> newRecord = new Record<>(k, sha256hex, record.timestamp()); // CREAR NUEVO EVENTO
 
-        context.forward(newRecord); // ENVIA EL REGISTRO HACÍA EL DOWNSTREAM
+        context.forward(newRecord); // ENVIA EL REGISTRO HACIA EL DOWNSTREAM
         this.registryNumber = this.registryNumber + 1; // AUMENTA EL ID DE EVENTO
 
     }
